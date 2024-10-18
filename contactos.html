@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Documento con iframe</title>
+    <script src="js/contactos.js"></script>
+
+    
+    <style>
+        
+        *{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: white;
+        }
+
+        table{ /* datos de tablas*/
+            position: absolute;
+            margin: 30px auto 0px auto ;
+            width: 500px;
+            height: 200px;
+            border-spacing: 0px 0px;
+            text-transform: uppercase;
+            border:none;
+            left: 100px;
+
+            
+        }
+        
+        td{ /* datos de celda*/
+            
+            
+            padding: 5px;
+            border-radius: 2px;
+            color: black;
+            border:none;
+            text-align: end;
+            font-size: 20px;
+            
+            
+
+        }
+        
+        
+        td input{
+            font-size: 15px;
+            padding: 10px;
+            border: none;
+            background-color: black;
+            text-align: center;
+            border-radius: 10px;
+        }td input:hover {
+            background: white;
+            color: black !important;
+        }
+        td .linea-primera{
+            margin-left: 0px;
+            background-color: blue;
+            color: red;
+            border-top: 222px solid black;
+            border-spacing: 1px;
+        }
+        
+        #titulo-contacto{
+            color: rgba(255, 255, 255, 1) !important;
+            margin: 40px;
+            color: black;
+            border: 1px black;
+            padding: 10px;
+            font-size: 25px;
+            
+        }
+        
+        #enviar{
+            position: absolute;
+            margin: 10px;
+            top: 350px;
+            right: 50px;
+        }
+
+        #limpiar{
+            position: absolute;
+            margin: 10px;
+            left: 500px;
+            top: 350px;
+        }
+
+
+        #enviar , #limpiar{
+            box-sizing: border-box;
+            display: inline-block;
+            padding: 0px 50px;
+            transition: all 0.1s ease;
+            border: 0;
+            line-height: 300%;
+            border-radius: 15px;
+            background-color: black;
+            
+            
+            
+        }#enviar:hover , #limpiar:hover {
+            background: white;
+            color: black !important;
+        }
+        
+        #text-area{
+            position: absolute;
+            color:  white;
+            bottom: 35px;
+            left: 580px;
+            background-color: black;
+            resize: horizontal;
+
+        }#text-area:hover {
+            background: white;
+            color: black !important;
+        } .error {
+        color: red;
+        font-size: 10px;
+        }
+       
+
+    </style>
+</head>
+<body>
+    
+    
+    <form action="">
+        
+        <table border="10">     
+
+            <caption id="titulo-contacto">Formulario de contacto</caption>
+            <tr >
+
+                <td class="linea-primera">
+                    <label for="nombre">nombre y apellidos</label>
+                </td>
+            
+                <td>
+                    <input type="text" id="nombre" placeholder="luffypapupro">
+                </td>     
+            </tr>
+
+            <tr>
+                <td class="linea-primera">
+                    <label for="correo">correo electronico</label>
+                </td>
+
+             
+                  <td>
+                    <input
+                    type="email" id="correo" placeholder="luffyelchamo@gmail.com" required><br>
+                    <span id="emailError" class="error"></span><br>
+                   
+                </td>
+            </tr>
+            
+            
+            <tr>
+
+                <td class="linea-primera">
+                    <label for="telefono">telefono</label>
+                </td>
+
+                <td>
+                    <input type="number" id="telefono" placeholder="920666333" required>
+                </td>     
+            </tr>
+            
+            <tr>
+                <td class="linea-primera" >
+                    <input id="enviar" type="button" value="Enviar" onclick="enviarDato()" >
+                </td>
+                <td >
+                    <input id="limpiar" type="button" value="Limpiar" onclick="limpiarDato()">
+                </td>
+            </tr>     
+            <tr>
+                <td>
+                    <label style="position: absolute;top: 125px; left: 600px;" for="Message">Message*</label>
+                    <textarea  name="text-area" id="text-area" cols="26" rows="9" placeholder="Escriba su comentario" required></textarea>
+                    
+                </td>
+            </tr>
+        
+        </table>
+    
+    </form>
+    
+</body>
+</html>

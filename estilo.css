@@ -1,0 +1,83 @@
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;  
+    margin:0px;
+    padding: 0px;
+
+}
+
+
+frame[name="izquierdo"] , frame[name="derecho"] ,  frame[name="arriba"] {
+    box-sizing: border-box;
+    margin: 80px;
+    border: 4mm ridge rgba(200,200,200, 2);
+    /*background: linear-gradient(90deg,#b8045b, #ff0fe2, #dc7cff,#ff4ab0 ,#ff851c, #fd3630, #ffd32f);*/
+    background: linear-gradient(90deg,chartreuse,green,green, greenyellow,green,green, chartreuse);
+    
+    background-size: 300% 300%;
+    animation: color 6s ease-in-out infinite;
+}
+
+@keyframes color {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+frame[name="izquierdo"] {
+    border-left: none;
+    border-top: none;
+    border-radius: 0px 0px 80px 0px ;
+    
+
+}
+frame[name="arriba"] {
+    border: 4mm ridge rgba(200,200,200, 2);
+    border-radius: 80px 80px 0px 0px;
+    
+}
+
+frame[name="derecho"] {
+    
+    border: 4mm ridge rgba(200,200,200, 2);
+    border-radius: 0px 0px 0px 80px;
+    border-top: none;  
+}
+ datos{ 
+    display: table;
+    border: none;
+}
+
+datos_personales {
+    display: table-row;   
+}
+
+
+Empresa, País , Industria, Empleados, Ingresos {
+    color: white;
+    font-weight: bolder;
+    position: relative;
+    border: 5px solid black;
+    display: table-cell;
+    padding: 10px;
+    text-align: center;
+    border-spacing: 3px;
+    border-radius: 1px;
+    width: 200px;  
+    top: 40px
+    
+}
+
+#empresa, #pais, #industria, #empleados,#ingresos{
+    font-size: 30px;  
+}
+
+
+
+
